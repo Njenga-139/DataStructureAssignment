@@ -6,14 +6,19 @@ int main(){
     printf("Enter a number: ");
     scanf("%d", &num);
 
+    if (num< 0){
+        printf("%d is not a palindrome\n", num);
+        return 0;
+    }
+
     original= num;
 
     while(num !=0){
 
         remainder= num %10;
-        reversed= (reversed*10)+ remainder;
+        reversed= (reversed * 10)+ remainder;
 
-        num/=10;
+        num /= 10;
     }
 
     if(original == reversed){
